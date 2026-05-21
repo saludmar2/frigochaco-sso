@@ -1,25 +1,14 @@
-INSTRUCCIONES
+VERSIÓN SIN CARPETA ICONS
 
-1) Apps Script:
-- Abrir el proyecto FRIGOCHACO SSO.
-- Reemplazar todo Código.gs por el contenido de Codigo_GS_APPS_SCRIPT.txt.
-- Guardar.
-- Implementar > Administrar implementaciones > Editar > Nueva versión > Implementar.
-- Confirmar que el acceso sea: Cualquier persona.
+Subir a GitHub estos archivos directamente en la raíz del repositorio:
+- index.html
+- manifest.json
+- service-worker.js
+- icon-192.png
+- icon-512.png
 
-2) GitHub:
-- En el repositorio frigochaco-sso, reemplazar:
-  index.html
-  manifest.json
-  service-worker.js
-  carpeta icons
-- Commit changes.
-- Esperar 1 minuto.
+No hace falta carpeta icons.
 
-3) Probar:
-- Abrir https://saludmar2.github.io/frigochaco-sso/
-- Cargar un desvío.
-- Verificar que aparece en Google Sheets y en otra PC.
-
-API usada:
-https://script.google.com/macros/s/AKfycbw4x97Yl70NZuZztuuAP06XY2ZVbkllAX5AtKu_ib7uzn087hueUeXB70BfTHTLJDdftw/exec
+IMPORTANTE:
+Si al abrir la app aparece texto raro con PNG, significa que index.html fue reemplazado por una imagen.
+La solución es subir este index.html y confirmar que GitHub muestre el archivo como texto HTML.
