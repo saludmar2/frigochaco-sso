@@ -1,0 +1,25 @@
+INSTRUCCIONES
+
+1) Apps Script:
+- Abrir el proyecto FRIGOCHACO SSO.
+- Reemplazar todo Código.gs por el contenido de Codigo_GS_APPS_SCRIPT.txt.
+- Guardar.
+- Implementar > Administrar implementaciones > Editar > Nueva versión > Implementar.
+- Confirmar que el acceso sea: Cualquier persona.
+
+2) GitHub:
+- En el repositorio frigochaco-sso, reemplazar:
+  index.html
+  manifest.json
+  service-worker.js
+  carpeta icons
+- Commit changes.
+- Esperar 1 minuto.
+
+3) Probar:
+- Abrir https://saludmar2.github.io/frigochaco-sso/
+- Cargar un desvío.
+- Verificar que aparece en Google Sheets y en otra PC.
+
+API usada:
+https://script.google.com/macros/s/AKfycbw4x97Yl70NZuZztuuAP06XY2ZVbkllAX5AtKu_ib7uzn087hueUeXB70BfTHTLJDdftw/exec

@@ -1,16 +1,15 @@
-const CACHE_NAME = 'frigochaco-sso-pwa-v1';
+const CACHE_NAME = 'frigochaco-sso-sync-v2';
 const APP_ASSETS = [
   './',
   './index.html',
   './manifest.json',
+  './service-worker.js',
   './icons/icon-192.png',
   './icons/icon-512.png'
 ];
 
 self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(APP_ASSETS))
-  );
+  event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_ASSETS)));
   self.skipWaiting();
 });
 
@@ -26,15 +25,11 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   const request = event.request;
 
-  // Navegación: si no hay internet, mostrar la app guardada.
   if (request.mode === 'navigate') {
-    event.respondWith(
-      fetch(request).catch(() => caches.match('./index.html'))
-    );
+    event.respondWith(fetch(request).catch(() => caches.match('./index.html')));
     return;
   }
 
-  // Archivos de la app: cache first.
   event.respondWith(
     caches.match(request).then(cached => {
       return cached || fetch(request).then(response => {
