@@ -1,7 +1,7 @@
 {
   "name": "FRIGOCHACO SSO",
   "short_name": "SSO",
-  "description": "Registro diario de actividades y desvíos de Seguridad y Salud Ocupacional.",
+  "description": "Registro diario de actividades y desvíos SSO",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

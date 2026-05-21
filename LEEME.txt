@@ -1,14 +1,16 @@
-VERSIÓN SIN CARPETA ICONS
+PAQUETE FINAL: MISMO HTML + SINCRONIZACIÓN
 
-Subir a GitHub estos archivos directamente en la raíz del repositorio:
-- index.html
+NO se cambió la fachada de la app. Se tomó el HTML que subiste como base.
+Solo se agregó:
 - manifest.json
 - service-worker.js
-- icon-192.png
-- icon-512.png
+- icon-192.png / icon-512.png
+- conexión GitHub PWA ↔ Apps Script ↔ Google Sheets
 
-No hace falta carpeta icons.
+Pasos:
+1) En Apps Script: reemplazar Código.gs por Codigo_GS_APPS_SCRIPT.txt, guardar e implementar nueva versión.
+2) En GitHub: subir/reemplazar index.html, manifest.json, service-worker.js, icon-192.png, icon-512.png.
+3) Abrir: https://saludmar2.github.io/frigochaco-sso/index.html?v=final2
 
-IMPORTANTE:
-Si al abrir la app aparece texto raro con PNG, significa que index.html fue reemplazado por una imagen.
-La solución es subir este index.html y confirmar que GitHub muestre el archivo como texto HTML.
+API configurada:
+https://script.google.com/macros/s/AKfycbw4x97Yl70NZuZztuuAP06XY2ZVbkllAX5AtKu_ib7uzn087hueUeXB70BfTHTLJDdftw/exec
