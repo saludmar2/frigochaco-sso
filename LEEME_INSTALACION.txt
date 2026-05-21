@@ -1,0 +1,16 @@
+FRIGOCHACO SSO - PWA
+
+Archivos incluidos:
+- index.html: aplicación principal basada en la versión HTML completa.
+- manifest.json: nombre, ícono y comportamiento de app instalable.
+- service-worker.js: permite abrir la app aunque no haya conexión temporal.
+- icons/: íconos de la app.
+
+Cómo usar:
+1. Subir TODOS estos archivos juntos a un hosting HTTPS, por ejemplo GitHub Pages, Netlify o un servidor interno con HTTPS.
+2. Abrir la URL publicada desde Chrome/Edge.
+3. En PC: instalar desde el ícono de instalación del navegador.
+4. En Android: menú de Chrome > Agregar a pantalla principal / Instalar app.
+
+Nota:
+La instalación PWA requiere HTTPS o localhost. Si abrís index.html como archivo local (file:///), funcionará como HTML, pero no se instalará como PWA completa.
